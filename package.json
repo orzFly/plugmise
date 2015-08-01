@@ -1,0 +1,20 @@
+{
+  "name": "plugmise",
+  "version": "0.0.1",
+  "description": "Add your Hook more easily.",
+  "main": "./lib/plugmise.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:orzfly/plugmise.git"
+  },
+  "author": "orzFly",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.34"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "coffee-script": "^1.9.1",
+    "mocha": "^2.2.1"
+  }
+}
