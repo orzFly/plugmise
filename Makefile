@@ -16,5 +16,5 @@ dist: clean init test build
 publish: dist
 	npm publish
 
-test:
+test: build
 	./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require test/support/env -- test/*.test.coffee

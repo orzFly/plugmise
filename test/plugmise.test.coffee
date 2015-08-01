@@ -103,6 +103,7 @@ describe 'plugin', ->
         deferSync.resolve()
 
       p.plugAsync (a, b) ->
+        p.refCount.should.equal 1
         a.should.equal 1
         b.should.equal 3
         events.push "async plug called"
@@ -113,7 +114,9 @@ describe 'plugin', ->
         events.push "call finished"
         deferAsync.resolve()
 
+        p.refCount.should.equal 1
         p.finish().then ->
+          p.refCount.should.equal 0
           events.push "plugmise finished"
 
           events.should.be.eql [

@@ -25,7 +25,7 @@ module.exports = class Plugmise
     syncPromise = Promise.settle(@syncGenerators.map (fn) -> fn(args...)).return(null)
 
     if @asyncGenerators.length > 0
-      asyncPromise = Promise.using @_createDisponser, =>
+      asyncPromise = Promise.using @_createDisponser(), =>
         Promise.settle(@asyncGenerators.map (fn) -> fn(args...)).return(null)
 
     syncPromise

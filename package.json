@@ -1,6 +1,6 @@
 {
   "name": "plugmise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add your Hook more easily.",
   "main": "./lib/plugmise.js",
   "repository": {
